@@ -1,0 +1,71 @@
+#This readme file is meant to explain how this program works and how to run it.
+
+#For starters, the end user must have aws cli already installed on their
+environment in order to this code.
+
+#There are also several depencencies that the end user must install in
+order to run this application:
+
+-If you are on a Unix based operating system and have the apt package
+manager installed run these commands to install the extra dependencies:
+
+python3 -m pip install reportlab
+
+pip install fpdf
+
+pip install boto3
+
+#If you do not have pip installed first run this command than the ones above
+sudo apt install python3-pip
+
+#After this run python3 Converter.py
+
+
+#This program is meant to extract text from a .png image and output it into
+#a pdf file with that text. The file will also be added to an S3 bucket
+#along with the original .png file. You will also be sent an email
+#and a message on amazon sqs notifying you of your transaction.
+#Additionally, the name of the .png file will be added to a dynamodb
+database to help users keep track of what files have already been used.
+
+#On one last note, the machine learning service Textract was used to
+extract the text from the file.
+
+
+
+References:
+
+https://www.youtube.com/watch?v=z_QU3FBpwNc
+
+https://docs.aws.amazon.com/code-library/latest/ug/python_3_textract_code_examples.html
+
+https://lumigo.io/learn/aws-lambda-python/
+
+https://boto3.amazonaws.com/v1/documentation/api/1.9.42/guide/s3-example-creating-buckets.html
+
+https://www.geeksforgeeks.org/convert-text-and-text-file-to-pdf-using-python/
+
+https://kollol-chowdhury.medium.com/extract-text-from-an-image-stored-in-s3-using-aws-textract-and-boto3-1d1d10535c41
+
+https://binaryguy.tech/aws/s3/how-to-upload-a-file-to-s3-using-python/
+
+
+https://stackoverflow.com/questions/50524739/upload-image-to-s3-python
+
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/python/example_code/textract/textract_wrapper.py
+
+https://blog.knoldus.com/how-to-upload-data-on-aws-dynamodb-using-boto3/
+
+https://amazon-dynamodb-labs.workshop.aws/game-player-data/core-usage/step2.html
+
+https://www.w3schools.com/python/python_json.asp
+
+
+https://www.learnaws.org/2020/12/18/aws-ses-boto3-guide/
+
+
+
+
+https://hands-on.cloud/working-with-amazon-ses-in-python/
+https://www.learnaws.org/2020/12/17/aws-sqs-boto3-guide/
+
